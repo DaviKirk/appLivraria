@@ -22,6 +22,12 @@ export default function Index({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#3060BB'
+        backgroundColor: '#3060BB',
+        display: 'flex'
+    },
+    navBar: {
+        backgroundColor: 'white',
+        width: '100%',
+        height: 108,
     }
 });
