@@ -10,14 +10,15 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@react-navigation/native": "^7.0.3",
-    "@react-navigation/native-stack": "^7.1.0",
+    "@react-navigation/native": "^7.0.6",
+    "@react-navigation/native-stack": "^7.1.7",
     "expo": "~52.0.4",
     "expo-status-bar": "~2.0.0",
     "react": "18.3.1",
     "react-native": "0.76.1",
     "react-native-safe-area-context": "^4.14.0",
-    "react-native-screens": "^4.2.0",
+    "react-native-screens": "^4.3.0",
+    "react-native-snap-carousel": "^3.9.1",
     "update": "^0.7.4"
   },
   "devDependencies": {

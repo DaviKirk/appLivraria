@@ -3,40 +3,51 @@ import { Text, Button, View, StyleSheet, TextInput, Image, Touchable, TouchableO
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function Index({ navigation }) {
 
     return (
         <ScrollView
-        style={styles.container}
+            style={styles.container}
         >
             <View
-            style={styles.navBar}
+                style={styles.navBar}
             >
                 <TouchableOpacity
-                style={styles.btnPesquisar}
+                    style={styles.btnPesquisar}
                 >
                     <Text
-                    style={styles.txtBtn}
+                        style={styles.txtBtn}
                     >Pesquisar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                style={styles.btnCarrinho}
+                    style={styles.btnCarrinho}
                 >
                     <Text
-                    style={styles.txtBtn}
+                        style={styles.txtBtn}
                     >carrinho</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                style={styles.btnHome}
+                    style={styles.btnHome}
                 >
                     <Text
-                    style={styles.txtBtn}
+                        style={styles.txtBtn}
                     >H</Text>
                 </TouchableOpacity>
             </View>
             <Image style={styles.imgNav} source={require('../../../assets/imageNav.png')} />
+
+            {/* espaço para colocar o Snap */}
+
+            <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                style={styles.listaHorizontal}
+            >
+
+
+            </ScrollView>
 
         </ScrollView>
     );
@@ -47,7 +58,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#3060BB',
         display: 'flex'
     },
-    imgNav:{
+    imgNav: {
         height: 53,
         width: '100%',
         marginTop: -8
@@ -58,14 +69,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center', 
+        alignItems: 'center',
         width: '100%',
         height: 108,
     },
     btnPesquisar: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center', 
+        alignItems: 'center',
         borderRadius: 30,
         borderWidth: 1.5,
         borderColor: '#000000',
@@ -76,7 +87,7 @@ const styles = StyleSheet.create({
     btnCarrinho: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center', 
+        alignItems: 'center',
         borderRadius: 30,
         borderWidth: 1.5,
         borderColor: '#000000',
@@ -87,7 +98,7 @@ const styles = StyleSheet.create({
     btnHome: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center', 
+        alignItems: 'center',
         borderRadius: 30,
         borderWidth: 1.5,
         borderColor: '#000000',
