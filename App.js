@@ -7,6 +7,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import loginScreen from './src/screen/loginScreen';
 import cadastroScreen from './src/screen/cadastroScreen';
 import homeScreen from './src/screen/homeScreen';
+import searchScreen from './src/screen/searchScreen';
 
 export default function App() {
 
@@ -28,6 +29,11 @@ export default function App() {
         <Stack.Screen
         name='homeScreen'
         component={homeScreen}
+        options={{headerShown: false}} 
+        />
+         <Stack.Screen
+        name='searchScreen'
+        component={searchScreen}
         options={{headerShown: false}} 
         />
       </Stack.Navigator>

@@ -2,37 +2,28 @@ import { Text, Button, View, StyleSheet, TextInput, Image, Touchable, TouchableO
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+
+
 
 export default function Index({ navigation }) {
 
     return (
-        <ScrollView
-            style={styles.container}
-        >
+        <View style={styles.container}>
             <View
                 style={styles.navBar}
             >
-                <TouchableOpacity
-                    style={styles.btnPesquisar}
+                <TextInput style={styles.searchBox}
+                placeholder='Pesquisar'
                 >
-                    <Text
-                        style={styles.txtBtn}
-                        onPress={() =>
-                          navigation.navigate('searchScreen', {name: 'searchScreen'})
-                        }
-                    >Pesquisar</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.btnCarrinho}
-                >
-                    <Text
-                        style={styles.txtBtn}
-                    >carrinho</Text>
-                </TouchableOpacity>
+
+                </TextInput>
                 <TouchableOpacity
                     style={styles.btnHome}
+                    onPress={() =>
+                      navigation.navigate('homeScreen', {name: 'homeScreen'})
+                    }
                 >
                     <Text
                         style={styles.txtBtn}
@@ -41,25 +32,18 @@ export default function Index({ navigation }) {
             </View>
             <Image style={styles.imgNav} source={require('../../../assets/imageNav.png')} />
 
-            {/* espaço para colocar o Snap */}
-
-            <ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                style={styles.listaHorizontal}
-            >
-
+            <ScrollView>
 
             </ScrollView>
-
-        </ScrollView>
+        </View>
     );
 }
-
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         backgroundColor: '#3060BB',
-        display: 'flex'
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     imgNav: {
         height: 53,
@@ -76,27 +60,19 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 108,
     },
-    btnPesquisar: {
+    searchBox: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 30,
         borderWidth: 1.5,
         borderColor: '#000000',
-        width: 162,
+        width: 295,
         height: 43,
-        marginRight: 5
-    },
-    btnCarrinho: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 30,
-        borderWidth: 1.5,
-        borderColor: '#000000',
-        width: 146,
-        height: 43,
-
+        marginRight: 5,
+        marginTop: 24,
+        paddingLeft: 30,
+        fontSize: 16
     },
     btnHome: {
         display: 'flex',
@@ -108,9 +84,6 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         marginLeft: 5,
+        marginTop: 24,
     },
-    txtBtn: {
-        textAlign: 'center',
-        fontSize: 20
-    }
 });
