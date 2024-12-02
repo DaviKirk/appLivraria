@@ -4,6 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { Feather } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function Index({ navigation }) {
 
@@ -23,20 +25,24 @@ export default function Index({ navigation }) {
                           navigation.navigate('searchScreen', {name: 'searchScreen'})
                         }
                     >Pesquisar</Text>
+                    <Ionicons name='search'  size={25} paddingLeft={6} />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.btnCarrinho}
+                    onPress={() =>
+                        navigation.navigate('cartScreen', {name: 'cartScreen'})
+                      }
                 >
                     <Text
                         style={styles.txtBtn}
                     >carrinho</Text>
+                    <Ionicons name='cart-outline'  size={25} paddingLeft={6} />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.btnHome}
                 >
-                    <Text
-                        style={styles.txtBtn}
-                    >H</Text>
+            <Feather name='home' size={25} style={styles.txtBtn}/>             
+
                 </TouchableOpacity>
             </View>
             <Image style={styles.imgNav} source={require('../../../assets/imageNav.png')} />
@@ -67,17 +73,17 @@ const styles = StyleSheet.create({
         marginTop: -8
     },
     navBar: {
-        paddingTop: 20,
+        paddingTop: 40,
         backgroundColor: 'white',
         flexDirection: 'row',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        height: 108,
+        height: 120,
     },
     btnPesquisar: {
-        display: 'flex',
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 30,
@@ -88,7 +94,7 @@ const styles = StyleSheet.create({
         marginRight: 5
     },
     btnCarrinho: {
-        display: 'flex',
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 30,
@@ -96,10 +102,8 @@ const styles = StyleSheet.create({
         borderColor: '#000000',
         width: 146,
         height: 43,
-
     },
     btnHome: {
-        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 30,

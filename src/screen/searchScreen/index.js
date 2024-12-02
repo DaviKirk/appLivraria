@@ -4,6 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { Feather } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
+
 
 
 
@@ -15,19 +18,17 @@ export default function Index({ navigation }) {
                 style={styles.navBar}
             >
                 <TextInput style={styles.searchBox}
-                placeholder='Pesquisar'
+                    placeholder='Pesquisar'
                 >
 
                 </TextInput>
                 <TouchableOpacity
                     style={styles.btnHome}
                     onPress={() =>
-                      navigation.navigate('homeScreen', {name: 'homeScreen'})
+                        navigation.navigate('homeScreen', { name: 'homeScreen' })
                     }
                 >
-                    <Text
-                        style={styles.txtBtn}
-                    >H</Text>
+                    <Feather name='home' size={25} style={styles.txtBtn} />
                 </TouchableOpacity>
             </View>
             <Image style={styles.imgNav} source={require('../../../assets/imageNav.png')} />
