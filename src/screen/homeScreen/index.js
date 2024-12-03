@@ -22,26 +22,26 @@ export default function Index({ navigation }) {
                     <Text
                         style={styles.txtBtn}
                         onPress={() =>
-                          navigation.navigate('searchScreen', {name: 'searchScreen'})
+                            navigation.navigate('searchScreen', { name: 'searchScreen' })
                         }
                     >Pesquisar</Text>
-                    <Ionicons name='search'  size={25} paddingLeft={6} />
+                    <Ionicons name='search' size={25} paddingLeft={6} />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.btnCarrinho}
                     onPress={() =>
-                        navigation.navigate('cartScreen', {name: 'cartScreen'})
-                      }
+                        navigation.navigate('cartScreen', { name: 'cartScreen' })
+                    }
                 >
                     <Text
                         style={styles.txtBtn}
                     >carrinho</Text>
-                    <Ionicons name='cart-outline'  size={25} paddingLeft={6} />
+                    <Ionicons name='cart-outline' size={25} paddingLeft={6} />
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.btnHome}
                 >
-            <Feather name='home' size={25} style={styles.txtBtn}/>             
+                    <Feather name='home' size={25} style={styles.txtBtn} />
 
                 </TouchableOpacity>
             </View>
@@ -49,15 +49,22 @@ export default function Index({ navigation }) {
 
             {/* espaço para colocar o Snap */}
 
-            <ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                style={styles.listaHorizontal}
-            >
+            <Text style={styles.txtMaisVendidos}>Os mais vendidos</Text>
 
+            <View style={{ backgroundColor: '#fff', marginTop: 30 }}>
+                <Text style={styles.titulosLivros}>Nacionais</Text>
+                <ScrollView
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    style={styles.listaHorizontal}
+                >
+                 <View 
+                 style={styles.livroH}
 
-            </ScrollView>
-
+                 >
+                 </View>
+                </ScrollView>
+            </View>
         </ScrollView>
     );
 }
@@ -116,5 +123,29 @@ const styles = StyleSheet.create({
     txtBtn: {
         textAlign: 'center',
         fontSize: 20
+    },
+    listaHorizontal: {
+        height: 230,
+        backgroundColor: '#fff',
+    },
+    livroH: {
+        width: 124,
+        height: 200,
+        backgroundColor: '#000',
+        marginLeft: 18,
+        borderRadius: 5,
+        marginTop: 6
+    },
+    titulosLivros: {
+        fontSize: 30,
+        fontWeight: '300',
+        textAlign: 'center'
+    },
+    txtMaisVendidos: {
+        fontSize: 30,
+        fontWeight: '300',
+        textAlign: 'center',
+        color: '#fff',
+        marginTop: 15,
     }
 });
