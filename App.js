@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, Text, View } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -39,13 +39,13 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-        name='cartScreen'
-        component={cartScreen}
-        options={{ headerShown: false }} />
+          name='cartScreen'
+          component={cartScreen}
+          options={{ headerShown: false }} />
         <Stack.Screen
-        name='favoritScreen'
-        component={favoritScreen}
-        options={{ headerShadow: false}} />
+          name='favoritScreen'
+          component={favoritScreen}
+          options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
 
