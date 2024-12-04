@@ -24,6 +24,9 @@ export default function Index({ navigation }) {
                     <FontAwesome6 style={styles.leftRowTxt} name='arrow-left' size={40} color={'black'} />
             </TouchableOpacity>
             <Image style={styles.ImgCompra} source={require('../../../assets/img/books/domCasmurro.jpg')} />
+            <View>
+                
+            </View>
         </View>
      );
 }
@@ -41,6 +44,7 @@ const styles = StyleSheet.create({
     ImgCompra: {
         width: 250,
         height: 375,
-        borderRadius: 10
+        borderRadius: 10,
+        marginTop: 24,
     }
 });
