@@ -244,7 +244,7 @@ export default function Index({ navigation }) {
                             onPress={() =>
                                 navigation.navigate('favoritScreen', { name: 'favoritScreen' })
                             }
-                            source={require('../../../assets/img/books/grande.jpg')}
+                            source={require('../../../assets/img/books/pequenoPrincipe.jpg')}
                         /></TouchableOpacity>
                     <TouchableOpacity
                         onPress={() =>
@@ -256,7 +256,7 @@ export default function Index({ navigation }) {
                             onPress={() =>
                                 navigation.navigate('favoritScreen', { name: 'favoritScreen' })
                             }
-                            source={require('../../../assets/img/books/horaEstrela.jpg')}
+                            source={require('../../../assets/img/books/senhorAneis.jpg')}
                         /></TouchableOpacity>
                     <TouchableOpacity
                         onPress={() =>
@@ -268,7 +268,7 @@ export default function Index({ navigation }) {
                             onPress={() =>
                                 navigation.navigate('favoritScreen', { name: 'favoritScreen' })
                             }
-                            source={require('../../../assets/img/books/macunaina.jpg')}
+                            source={require('../../../assets/img/books/oSonho.jpg')}
                         /></TouchableOpacity>
                     <TouchableOpacity
                         onPress={() =>
@@ -280,7 +280,7 @@ export default function Index({ navigation }) {
                             onPress={() =>
                                 navigation.navigate('favoritScreen', { name: 'favoritScreen' })
                             }
-                            source={require('../../../assets/img/books/paixãoSegunda.jpg')}
+                            source={require('../../../assets/img/books/OHobbit.jpg')}
                         /></TouchableOpacity>
                     <TouchableOpacity
                         onPress={() =>
@@ -292,7 +292,7 @@ export default function Index({ navigation }) {
                             onPress={() =>
                                 navigation.navigate('favoritScreen', { name: 'favoritScreen' })
                             }
-                            source={require('../../../assets/img/books/romanceiro.jpg')}
+                            source={require('../../../assets/img/books/contoDeduas.jpg')}
                         /></TouchableOpacity>
                     <TouchableOpacity
                         onPress={() =>
@@ -304,7 +304,7 @@ export default function Index({ navigation }) {
                             onPress={() =>
                                 navigation.navigate('favoritScreen', { name: 'favoritScreen' })
                             }
-                            source={require('../../../assets/img/books/vidasSecas.jpg')}
+                            source={require('../../../assets/img/books/sobrouNinguem.jpg')}
                         /></TouchableOpacity>
                 </ScrollView>
             </View>

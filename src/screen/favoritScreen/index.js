@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: 'bold',
         marginTop: 17,
-        marginLeft: 33
+        marginRight: 210
     },
     buyBtn: {
         backgroundColor: '#3F5EC3',
