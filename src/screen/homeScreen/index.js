@@ -235,98 +235,6 @@ export default function Index({ navigation }) {
                         /></TouchableOpacity>
                 </ScrollView>
             </View>
-            <View style={{ backgroundColor: '#fff', marginTop: 30 }}>
-                <Text style={styles.titulosLivros}
-                >Romance</Text>
-                <ScrollView
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    style={styles.listaHorizontal}
-                >
-                    <TouchableOpacity
-                        onPress={() =>
-                            navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                        }
-                    >
-                        <Image
-                            style={styles.livroH}
-                            source={require('../../../assets/img/books/domCasmurro.jpg')}
-                        />
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() =>
-                            navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                        }
-                    >
-                        <Image
-                            style={styles.livroH}
-                            onPress={() =>
-                                navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                            }
-                            source={require('../../../assets/img/books/grande.jpg')}
-                        /></TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() =>
-                            navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                        }
-                    >
-                        <Image
-                            style={styles.livroH}
-                            onPress={() =>
-                                navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                            }
-                            source={require('../../../assets/img/books/horaEstrela.jpg')}
-                        /></TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() =>
-                            navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                        }
-                    >
-                        <Image
-                            style={styles.livroH}
-                            onPress={() =>
-                                navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                            }
-                            source={require('../../../assets/img/books/macunaina.jpg')}
-                        /></TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() =>
-                            navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                        }
-                    >
-                        <Image
-                            style={styles.livroH}
-                            onPress={() =>
-                                navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                            }
-                            source={require('../../../assets/img/books/paixãoSegunda.jpg')}
-                        /></TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() =>
-                            navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                        }
-                    >
-                        <Image
-                            style={styles.livroH}
-                            onPress={() =>
-                                navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                            }
-                            source={require('../../../assets/img/books/romanceiro.jpg')}
-                        /></TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() =>
-                            navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                        }
-                    >
-                        <Image
-                            style={styles.livroH}
-                            onPress={() =>
-                                navigation.navigate('favoritScreen', { name: 'favoritScreen' })
-                            }
-                            source={require('../../../assets/img/books/vidasSecas.jpg')}
-                        /></TouchableOpacity>
-                </ScrollView>
-            </View>
         </ScrollView>
     );
 }
@@ -409,5 +317,5 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#fff',
         marginTop: 15,
-    }
+    },
 });
